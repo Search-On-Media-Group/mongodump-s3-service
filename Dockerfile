@@ -5,8 +5,6 @@ WORKDIR /usr/local/bin
 
 COPY awesomescript.sh myawesomescript.sh
 
-COPY instant.sh instant
-
 ARG MONGO_HOST
 ARG MONGO_PORT
 ARG MONGO_USER
@@ -21,7 +19,6 @@ ARG BUCKET_PATH
 ARG KEEP_OLD_FILES_DAYS=7
 ARG TZ=Europe/Rome
 
-RUN chmod +x instant
 RUN chmod +x myawesomescript.sh
 
 RUN apk add bash

@@ -7,6 +7,20 @@ COPY awesomescript.sh myawesomescript.sh
 
 COPY instant.sh instant
 
+ARG MONGO_HOST
+ARG MONGO_PORT
+ARG MONGO_USER
+ARG MONGO_PASSWORD
+ARG AUTH_DB
+ARG ACCESS_KEY_ID
+ARG SECRET_ACCESS_KEY
+ARG DEFAULT_REGION
+ARG ENDPOINT
+ARG BUCKET_NAME
+ARG BUCKET_PATH
+ARG KEEP_OLD_FILES_DAYS=7
+ARG TZ=Europe/Rome
+
 RUN chmod +x instant
 RUN chmod +x myawesomescript.sh
 
